@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "react-native-paper";
 import { SvgXml } from "react-native-svg";
 
 import star from "../../../../assets/star.js";
@@ -8,6 +7,8 @@ import { Spacer } from "../../../components/spacer/spacer.component.js";
 import { Text } from "../../../components/typography/text.component.js";
 import {
   Address,
+  CardCover,
+  CardView,
   Icon,
   Info,
   Section,
@@ -36,8 +37,8 @@ const RestaurantInfoCard = ({ restaurant }) => {
   };
 
   return (
-    <Card elevation={5}>
-      <Card.Cover source={{ uri: photos[0] }} />
+    <CardView elevation={5}>
+      <CardCover source={{ uri: photos[0] }} />
       <Info>
         <Text variant="label">{name}</Text>
         <Section>
@@ -58,7 +59,7 @@ const RestaurantInfoCard = ({ restaurant }) => {
         </Section>
         <Address>{address}</Address>
       </Info>
-    </Card>
+    </CardView>
   );
 };
 
